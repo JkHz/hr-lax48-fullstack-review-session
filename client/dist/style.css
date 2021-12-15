@@ -10,6 +10,7 @@ html {
 body {
   font-family: 'Varela Round', sans-serif;
   color: rgb(255, 255, 255);
+  font-size: 1.5rem;
 }
 
 #app {
