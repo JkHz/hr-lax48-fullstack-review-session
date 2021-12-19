@@ -51,13 +51,15 @@ export default class Add extends React.Component {
             type="text"
             name="name"
             value={this.state.name}
-            onChange={this.changeHandler} />
+            onChange={this.changeHandler}
+          />
           <label>Image URL: </label>
           <input
             type="text"
             name="imgurl"
             value={this.state.imgurl}
-            onChange={this.changeHandler}/>
+            onChange={this.changeHandler}
+          />
           <button type="submit" value="Submit">Submit</button>
         </form>
         <h1>Preview:</h1>

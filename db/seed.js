@@ -16,10 +16,6 @@ const sampleData = [
     imageUrl: "https://ca.slack-edge.com/T2SV1LBC6-U02L8EAM075-5d50b4055eee-512"
   },
   {
-    name: "Veronica",
-    imageUrl: "https://ca.slack-edge.com/T2SV1LBC6-U02L8EBDSD9-d6ca21384706-512"
-  },
-  {
     name: "Emily",
     imageUrl: "https://ca.slack-edge.com/T2SV1LBC6-U02L1N5DC86-0a4dc336d4cf-512"
   },
@@ -46,7 +42,8 @@ const sampleData = [
 ];
 
 const insertSampleData = function() {
-  Student.create(sampleData)
+  Student.insertMany(sampleData)
+    .catch(err => `Error inserting data: ${err}`)
     .then(() => mongoose.connection.close());
 };
 

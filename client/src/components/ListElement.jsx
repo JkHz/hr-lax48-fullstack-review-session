@@ -52,8 +52,8 @@ class ListElement extends React.Component {
             type="text"
             value={this.state.name}
             placeholder={this.props.student.name}
-            onChange={this.changeNameHandler}
-          ></input>
+            onChange={this.changeNameHandler}>
+          </input>
           <div>
             <button onClick={this.changeToggleHandler}>Cancel</button>
             <button onClick={this.handleSubmit}>Update</button>

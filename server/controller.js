@@ -3,14 +3,14 @@ const Student = require('../db/Student.js');
 const controller = {
   students: {
     getStudents: function (req, res) {
-      Student.find()
+      Student.find({})
         .then(students => res.status(200).send(students))
         .catch(err => res.status(404).send(err))
     },
 
     postStudent: function (req, res) {
       Student.create(req.body)
-        .then(() => res.status(200).send('Student added'))
+        .then(() => res.status(200).send('Student added!'))
         .catch(err => res.status(404).send(err))
     },
 
